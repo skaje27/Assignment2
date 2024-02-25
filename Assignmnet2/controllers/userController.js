@@ -1,8 +1,5 @@
 const User = require('../Models/user');
 
-
-
-
 // Create a new user
 exports.createUser = async (req, res) => {
   try {
@@ -86,7 +83,6 @@ exports.login = async (req, res) => {
 };
 const bcrypt = require('bcrypt');
 
-// ...
 
 // Inside your registration route
 exports.register = async (req, res) => {

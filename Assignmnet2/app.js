@@ -22,7 +22,6 @@ mongoose.connect(process.env.MONGODB_URI, {
 })
   .then(() => {
     console.log('Connected to MongoDB');
-    // Your other server setup code...
   })
   .catch((err) => {
     console.error('Error connecting to MongoDB:', err.message);
@@ -33,7 +32,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/users', userRoutes);
-app.use('/blogs', authenticationMiddleware, cacheMiddleware, blogRoutes); // Use caching and authentication middleware for blogs
+app.use('/blogs', authenticationMiddleware, cacheMiddleware, blogRoutes);
 
 // Start the server
 app.listen(PORT, () => {

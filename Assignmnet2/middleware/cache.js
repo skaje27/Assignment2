@@ -1,9 +1,5 @@
-// cache.js
-
 const cache = require('memory-cache');
-
-// Time in milliseconds for the cache to live
-const CACHE_TTL = 60 * 1000; // 1 minute
+const CACHE_TTL = 60 * 1000; 
 
 function getKey(req) {
   return req.originalUrl || req.url;
